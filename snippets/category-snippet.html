@@ -1,0 +1,12 @@
+<!-- We're reading each of the menu categories from the server, and then pasting this template over and over again, to create the page dynamically -->
+
+<div class="col-md-3 col-sm-4 col-xs-5 col-xxs-12">
+	<a href="#" onclick="$dc.loadMenuItems('{{short_name}}');">
+		<div class="category-tile">
+			<img width="200" height="200" src="images/menu/{{short_name}}/{{short_name}}.jpg" alt="{{name}}">
+			<span>{{name}}</span>
+		</div>
+	</a>
+</div>
+
+<!-- the double curly braces are the property names in categories.json file, that will be replaced -->

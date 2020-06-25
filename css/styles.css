@@ -1,0 +1,411 @@
+/** #-id      .-class **/
+body {
+	font-size: 16px;
+	color: #fff;
+	background-color: #61122f;
+	font-family: 'Oxygen', sans-serif;
+}
+
+/** HEADER START **/
+
+#header-nav {
+	background-color: #f6b319; /**just yellow**/
+	border-radius: 0; /**to remove the rounded edges**/
+	border: 0; /**there is no border**/
+}
+
+#logo-img {
+	background: url('../images/restaurant-logo_large.png') no-repeat; /**the image will not get repeated multiple times**/
+	width: 150px; /**we don't want the logo to get clipped**/
+	height: 150px;
+	margin: 10px 15px 10px 0; /**TOP RIGHT BOTTOM LEFT**/
+}
+
+.navbar-brand { /**the overall styling of the navbar-brand**/
+	padding-top: 25px; 
+}
+
+.navbar-brand h1 { /** Restaurant Name**/
+	font-family: 'Lora', serif;
+	color: #557c3e;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222; /** Just some shadow for the text, specified by the horizontal shadow, vertical shadow, blur radius and color **/
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none; /**to disable the underline that comes at the bottom of the header**/
+}
+
+.navbar-brand p { /**Kosher Certification**/
+	color: #000;
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-top: 15px;
+}
+
+.navbar-brand p span { /** Star-K **/
+	vertical-align: middle;
+}
+
+#nav-list { /** the ul tag **/
+	margin-top: 10px;
+}
+
+#nav-list a {
+	color: #951C49; /**using the maroon color**/
+	text-align: center;
+}
+
+#nav-list a:hover {
+	background: #E7E7E7; /**on hovering over the nav element, it will change color **/
+}
+
+#nav-list a span {
+	font-size: 1.8em; /**increasing the font**/
+}
+
+#phone {
+	margin-top: 5px;
+}
+
+#phone a { /**Phone Number **/
+	text-align: right;
+	padding-bottom: 0;
+}
+
+#phone div { /**We Deliver**/
+	color: #557c3e; /** Green **/
+	text-align: right;
+	padding-right: 15px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #61122f; /**to provide styling for the navbar button**/
+}
+
+.navbar-header button.navbar-toggle {
+	clear: both; /**to ensure that Kosher Certified does not spill over the yellow navbar **/
+	margin-top: -30px; /** applying a negative margin for the button, so that when the screen size is small, the navbar isn't too big **/
+}
+
+/** HEADER END **/
+
+/* FOOTER */
+.panel-footer { /** this is a bootstrap.css class **/
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+
+.panel-footer div.row { /** all three parts **/
+	margin-bottom: 35px;
+}
+
+#hours, #address { /** just the titles hours and address **/
+	line-height: 2;
+}
+
+#hours > span, #address > span { /** the content under hours and address **/
+	font-size: 1.3em;
+}
+
+#address p { /** the delivery note in the bottom of address **/
+	color: #557c3e; /* green */
+	font-size: .8em;
+	line-height: 1.8;
+}
+
+#testimonials { /** all the content under testimonials **/
+	font-style: italic;
+}
+
+#testimonials p:nth-child(2) { /** just the 2nd testimonial mentioned **/
+	margin-top: 25px;
+}
+
+/** HOME PAGE **/
+.container .jumbotron { /** instead of repeating it in each of the media queries below, we can put it this way. Don't worry, the specificity is not in question here because the properties get added together! **/
+	box-shadow: 0 0 50px #3F0C1F;
+	border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+	height: 250px;
+	width: 100%; /** 100% of the container element (the bootstrap grid) **/
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+	background: url('../images/menu-tile.jpg') no-repeat;
+	background-position: center;
+}
+
+#specials-tile {
+	background: url('../images/specials-tile.jpg') no-repeat;
+	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+
+/** END HOME PAGE **/
+
+/* MENU CATEGORIES PAGE */
+
+.category-tile { /* looks similar to the menu and specials tile */
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+
+.category-tile span { /*Just the title of the tile */
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+
+.category-tile:hover { /* on hovering over the tile */
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div { /* the title 'Menu Categories' and the next element of the same parent */
+	margin-bottom: 50px;
+}
+/** The widths provided below have been taken from how Bootstrap subdivides and creates ts breakpoints **/ 
+
+/* SINGLE CATEGORY PAGE */
+#menu-item-tile {
+	margin-bottom: 25px;
+}
+
+.menu-item-tile hr {
+	width: 80%;
+}
+
+.menu-item-tile .menu-item-price {
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -15px; /* just for alignment */
+	margin-bottom: 20px;
+}
+
+.menu-item-tile .menu-item-price span {
+	font-size: .6em;
+}
+
+.menu-item-photo {
+	position: relative; /* because the code is to be entered at the bottom */
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px; /* don't want the pic to get pixelated */
+}
+
+.menu-item-photo div { /* the ID of the menu item */
+	position: absolute; 
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #557c3e;
+	text-align: center;
+}
+
+.menu-item-description { /* the bottom 3 styles all deal with the description of the menu item */
+	padding-right: 30px;
+}
+
+h3.menu-item-title {
+	margin: 0 0 10px; /* margin-bottom: 10px; */
+}
+
+.menu-item-details {
+	font-size: .9em;
+	font-style: italic;
+}
+
+/*********** Large devices only **********/
+@media (min-width: 1200px) {
+	.container .jumbotron { /** overriding some of the bootstrap jumbotron properties **/
+		background: url('../images/jumbotron_1200.jpg') no-repeat;
+		height: 675px;
+	}
+}
+
+/*********** Medium devices only *********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	/** Header **/
+	#logo-img { /** Targeting our logo image **/
+		background: url('../images/restaurant-logo_medium.png') no-repeat; /** medium sized logo **/
+		width: 100px;
+		height: 100px;
+		margin: 5px 5px 5px 0;
+	}
+	/** End header **/
+
+	.container .jumbotron {
+		background: url('../images/jumbotron_992.jpg') no-repeat;
+		height: 558px;
+	}
+}
+
+/*********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.container .jumbotron {
+		background: url('../images/jumbotron_768.jpg'), no-repeat;
+		height: 432px;
+	}
+}
+
+/*********** Extra small devices only **********/
+@media (max-width: 767px) {
+	/** Header **/
+	.navbar-brand {
+		padding-top: 10px;
+		height: 80px; /** constraint **/
+	}
+
+	.navbar-brand h1 { /** Restaurant name **/
+		padding-top: 10px;
+		font-size: 5vw; /** vw - viewport width (1vw = 1% of viewport width) **/
+	}
+
+	.navbar-brand p { /** Kosher Certified **/
+		font-size: .6em;
+		margin-top: 12px;
+	}
+
+	.navbar-brand p img { /** Star-K **/
+		height: 20px; /** constraint **/
+	}
+
+	#collapsable-nav a { /** Collapsed nav menu glyph **/
+		font-size: 1.2em; /** the font size of both the word and the glyphicon will increase **/
+	}
+
+	#collapsable-nav a span {
+		font-size: 1em; /** the size of the glyphicons become smaller **/
+		margin-right: 5px;
+	}
+
+	#call-btn > a { /** the a tag is immediately enclosed under a tag where id=call-btn **/
+		font-size: 1.5em;
+		display: block;
+		margin: 0 20px;
+		padding: 10px;
+		border: 2px solid #fff;
+		background-color: #f6b319;
+		color: #951c49;
+	}
+
+	#xs-deliver {
+		margin-top: 5px;
+		font-size: .7em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+	/** End Header **/
+
+	/* FOOTER */
+	.panel-footer section { /* the footer section when the screen size is XS */
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.panel-footer section:nth-child(3) {
+		margin-bottom: 0; /* margin already exists on the whole row */
+	}
+
+	.panel-footer section hr {
+		width: 50%; /*the horizontal rule won't be as long as the width of the browser */
+	}
+	/* END FOOTER */
+
+	/** HOME PAGE **/
+	.container .jumbotron { /** we mentioned two classes to solve the problem of specificity **/
+		margin-top: 30px;
+		padding: 0;	
+	}
+
+	#menu-tile, #specials-tile { /** When the screen size is XS, we don't want the tiles to extend to the width of browser. We need it to be the same size as that of the picture.**/
+		width: 360px;
+		margin: 0 auto 15px;
+	}
+
+	/** SINGLE CATEGORY */
+
+	.menu-item-photo {
+		margin-right: auto;
+	}
+
+	.menu-item-tile .menu-item-price {
+		text-align: center;
+	}
+
+	.menu-item-description {
+		text-align: center;
+	}
+}
+
+/*********** Super extra small devices only (iPhone 4) *********/
+@media (max-width: 479px) {
+	/** HEADER **/
+	.navbar-brand h1 { /* Restaurant name */
+		padding-top: 5px;
+		font-size: 6vw;
+	}
+	/* END HEADER */
+
+	/** HOME PAGE **/
+	#menu-tile, #special-tile {
+		width: 280px;
+		margin: 0 auto 15px;
+	}
+
+	/* MENU CATEGORIES */
+	.col-xxs-12 { /* there's no bootstrap media query for this */
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
+	}
+}

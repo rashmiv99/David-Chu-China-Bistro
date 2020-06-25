@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Not compatible with older versions of IE. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- To get device compatibility, and to avoid unecessary zooming out -->
+  <title>David Chu's China Bistro</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- you can import these fonts from google fonts, it allows you to paste these <link> lines -->
+</head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default"> <!-- This is the navbar. The classes provided are given by bootstrap; it's a class and its subclass. The navbar has the wrong colour and has rounded edges initially. -->
+      <div class="container"> <!-- There are two types: container and container-fluid. The latter stretches all the way to the edges of the browser, and has about 15px padding on both sides and changes its width, depending on the width of the broswer. The one used here, does not adjest that way -->
+        <div class="navbar-header"> <!-- part of bootstrap documentation -->
+          <a href="index.html" class="pull-left visible-md visible-lg"> <!-- for the logo to become clickable. Pull-left is bottstrap's version of float left, which basically means that instead of providing two block level elements (navbarheader and navbarbrand), the former element will be pulled to the left of the latter. The element should only be visible when the screen size is medium or large.-->
+            <div id="logo-img"></div> <!--incase the logo does not load, the alt-text will allow users to read.-->
+          </a>
+
+          <div class="navbar-brand"> <!-- part of bootstrap documentation; it's for your company, product, or project name. -->
+            <a href="index.html"> <!-- for the header to become clickable -->
+              <h1>David Chu's China Bistro</h1> <!--heading-->
+            </a>
+            <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification"> <!--kosher logo along will be inserted-->
+              <span>Kosher Certified</span> <!-- span doesn't do any formatting; so the text will not wrap to the next line.-->
+            </p>
+          </div>
+
+          <!-- A lot of these codes can be found on the bootstrap documentation page, so don't worry -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false"> <!--navbar-toggle gives the positioning of the navigation button (a button with three dashes which drops down) and specifies the width at which the button will not be displayed. collapsed signifies to a bootstrap plugin (it will not be found in bootstrap.css) that this button is in a collapsed state (nobody has clicked on it, and once somebody does, the collpased class will go away). 'data-' are HTML5 API attributes that allow JavaScript code to get the specified attributes easily. 'collapse' is mentioned in bootstrap.js. The 'aria-expanded='false' is for screen readers. It means that the expandable section or items is/are currently collapsed (invisible). If set to 'true', it means that the element is explanded (visible). #collapsable-nav is going to be used to specify the contents of the dropdown. The 'id' is only referenced with #, it's defined without it. -->
+            <span class="sr-only">Toggle navigation</span> <!-- sr-only = screen reader only; the words 'toggle navigation' will not appear on the screen. -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> <!-- Puts three horizontal bars inside our button. -->
+          </button>
+        </div>
+
+        <!-- The div below contains all of the navigation elements. -->
+        <div id="collapsable-nav" class="collapse navbar-collapse"> <!-- notice the data-target value from the button tag! The way we specify a selector API type of ID is we put a # sign infront of it. So basically, we're defining the collapsing functionality here. As for the classes, bootstrap documentation has defined them to be used for collapsable menus. -->
+          <ul id="nav-list" class="nav navbar-nav navbar-right"> <!-- a common way to display the items is in the form of an unordered list. The first two classes specify that the components belong to the navbar, and the last class basically says that you still have a navigation bar, but you want it to be pulled to the right. -->
+            <li class="visible-xs">
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span> Home
+              </a>
+            </li>
+            <!-- the above li is used to define a home option for mobile phone users. -->
+            <li class="active"> <!-- list items; 3 in total -->
+              <a href="menu-categories.html"> <!-- it will point ot some page within the website; so that on clicking, you'll be redirected to that page. -->
+                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu <!-- glyphicon refers to an icon font (a vector based image that is able to behave the same way a font would behave; like colourizing it, sizing it). There will be break between the icon and the word 'Menu', but that break will go away when the screen size is XS (extra small). So the content will become horizontal. -->
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards
+              </a>
+            </li>
+            <li id="phone" class="hidden-xs"> <!-- the phone number will be hidden when the size of the screen is XS. This is because we do not want the number to show up as a part of the menu, when the screen is small, instead we want it to show up across the entire width of the mobile browser, and there will be different styling for it. -->
+              <a href="tel:410-602-5008"> <!-- if someone clicks/taps on it, the device will be prompted to call the number. -->
+                <span> 410-602-5008</span>
+              </a>
+              <div>* We Deliver</div>
+            </li>
+          </ul> <!-- #nav-list -->
+        </div> <!-- .collapse .navbar-collapse -->
+      </div> <!-- .container -->
+    </nav> <!-- #header-nav -->
+  </header>
+
+  <!-- For the Contact details to appear when the screen size is small -->
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+      <span class="glyphicon glyphicon-earphone"></span> 410-602-5008
+    </a>
+  </div>
+
+  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+  <!-- Coding for the Menu Categories! -->
+  <div id="main-content" class="container"> 
+    <h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
+    <div class="text-center">
+      Substituting white rice with brown rice or fried rice after 3:00pm will be $1.50 for a pint an $2.50 for a quart.
+    </div>
+    <!-- The re will be 4 pictures per row on the page -->
+    <section class="row">
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="200" height="200" src="images/menu/B/B.jpg" alt="Lunch">
+            <span>Lunch</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div> <!-- End of #main-content -->
+
+  <!-- FOOTER -->
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row"> <!-- because hours, address, testimonials -->
+
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          7105 Reisterstown Road<br>
+          Baltimore, MD 21215
+          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+          <hr class="visible-xs">
+        </section>
+
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more!"</p>
+        </section>
+
+      </div>
+      <div class="text-center">&copy; Copyright David Chu's China Bistro 2020</div> <!-- &copy places the copyright symbol -->
+    </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

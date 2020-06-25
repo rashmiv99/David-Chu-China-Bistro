@@ -1,0 +1,1 @@
+For some reason the the proper viewing takes places only with the old version of bootstrap :(

@@ -1,0 +1,74 @@
+<div class="jumbotron">
+  <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs"> <!-- img-responsive is a part of bootstrap, because as the width of the browser changes, the size of the picture will also change proportionately. -->
+</div>
+
+<div id="home-tiles" class="row">
+  <!-- At the medium level the screen will be divided into 3 equally sized tiles (4x3=12) -->
+  <!-- At the small level we have 2 equally sized tiles with 1 big tile at the bottom (6x2=12; 1x12=12) -->
+  <!-- At the extra small level, the screen will have 3 tiles stacked one on top of each other (1x12=12; 1x12=12; 1x12=12) -->
+
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="#" onclick="$dc.loadMenuCategories();"> <!-- when the user clicks on the tile, the menu items belonging to a specific category is loaded by the provided function. -->
+      <div id="menu-tile">
+        <span>menu</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="#" onclick="$dc.loadMenuItems('SP');">
+      <div id="specials-tile">
+        <span>specials</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <a href="https://goo.gl/maps/7Cq9qJN1JQe1UyVN6" target="_blank"> <!-- on clicking, it will open a new tab -->
+      <div id="map-tile">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.6752455000174!2d-76.7116881!3d39.36359029999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid%20Chu&#39;s%20China%20Bistro!5e0!3m2!1sen!2sin!4v1592216183702!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <span>map</span>
+      </div>
+    </a>
+  </div>
+</div> <!-- End of #home-tiles -->
+
+
+
+<!-- the code below belongs to the main content of the page without SPA -->
+
+<!--
+<div class="jumbotron">
+  <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs"> //Comment: img-responsive is a part of bootstrap, because as the width of the browser changes, the size of the picture will also change proportionately. //EndComment
+</div>
+
+<div id="home-tiles" class="row">
+  //Comment: At the medium level the screen will be divided into 3 equally sized tiles (4x3=12) -->
+  <!-- At the small level we have 2 equally sized tiles with 1 big tile at the bottom (6x2=12; 1x12=12) -->
+  <!-- At the extra small level, the screen will have 3 tiles stacked one on top of each other (1x12=12; 1x12=12; 1x12=12) //EndComment
+
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="menu-categories.html"> //Comment: when the user clicks on the tile, the menu items belonging to a specific category. //EndComment
+      <div id="menu-tile">
+        <span>menu</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="single-category.html">
+      <div id="specials-tile">
+        <span>specials</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <a href="https://goo.gl/maps/7Cq9qJN1JQe1UyVN6" target="_blank"> //Comment: on clicking, it will open a new tab //EndComment
+      <div id="map-tile">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.6752455000174!2d-76.7116881!3d39.36359029999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid%20Chu&#39;s%20China%20Bistro!5e0!3m2!1sen!2sin!4v1592216183702!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <span>map</span>
+      </div>
+    </a>
+  </div>
+</div> //Comment End of #home-tiles -->
